@@ -1,0 +1,13 @@
+<h1>Create a Post It Note</h1>
+<%= form_for @note do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br />
+  <%= f.label :body %>
+  <%= f.text_box :body %>
+  <%= f.submit %>
+  <% end %>
+
+  <p>
+  <%= link_to 'Home Page', root_path %>
+</p>
