@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-root 'notes#index'
+root 'static_pages#home'
+get '/about', to: 'static_pages#about'
+
 resources :notes 
 end
