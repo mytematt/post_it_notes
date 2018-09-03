@@ -27,7 +27,7 @@ class NotesController < ApplicationController
   end
 
   def update
-    if @note.update(page_params)
+    if @note.update(note_params)
       redirect_to note_path(@note)
     else
       render :form

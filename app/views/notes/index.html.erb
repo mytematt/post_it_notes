@@ -1,2 +1,14 @@
-<h1>Notes#index</h1>
-<p>Find me in app/views/notes/index.html.erb</p>
+<h1>Post Its</h1>
+<p>
+  <%= link_to 'Create New Note', new_note_path %>
+</p>
+<% @notes.each do |note| %>
+  <h2> <%= note.name %></h2>
+  <%= link_to 'Show Note', note_path(note.id) %>
+  <%= link_to 'Edit Note', edit_note_path(note) %>
+  <%= link_to 'Delete', note_path(note), method: :delete %>
+<% end %>
+</br>
+</br>
+</br>
+<%= link_to 'Home Page', root_path %>
